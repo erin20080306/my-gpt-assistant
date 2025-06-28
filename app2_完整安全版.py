@@ -1,26 +1,3 @@
-import streamlit as st
-import pandas as pd
-import time
-from openai import OpenAI
-import json
-from io import BytesIO
-from docx import Document
-from fpdf import FPDF
-from openpyxl import Workbook
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-import matplotlib.pyplot as plt
-import seaborn as sns
-import re
-
-# ✅ 頁面設定
-st.set_page_config(page_title="GPT AI 全功能極速助手", layout="wide", page_icon="⚡")
-st.markdown("<h1 style='text-align: center; color: #2C3E50;'>⚡ GPT AI 全功能極速助手</h1>", unsafe_allow_html=True)
-
-# ✅ OpenAI API KEY（安全建議：實務部署請用 st.secrets 或 os.environ）
-api_key = "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"
-client = OpenAI(api_key=api_key)
 
 # ✅ 特休資訊
 annual_leave_info = "📅 特休依《勞基法》第38條：滿6個月3天、滿1年7天、滿2年10天…最高30天"
